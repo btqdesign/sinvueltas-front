@@ -1,7 +1,6 @@
-@import "/assets/scss/variables.scss";
-@import "/assets/scss/settings.scss";
-.test-from{
-    .styles{
-        height: 100px;
-    }
-}
+/*Settings*/
+@import "../../components/settings.scss";
+@import "../../components/pages.scss";
+
+
+

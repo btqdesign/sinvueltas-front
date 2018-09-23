@@ -1,8 +1,5 @@
 import "../scss/style.scss";
+import "../js/pages.js"
 
-function test(){
-    console.log("TEST")
-}
-$document.ready( function(){
-    test();
-})
+
+

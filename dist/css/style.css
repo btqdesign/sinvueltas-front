@@ -1,0 +1,165 @@
+/*Settings*/
+/*Media Queries*/
+/* Fonts */
+@font-face {
+  font-family: "Avenir-regular";
+  src: url("/dist/fonts/Avenir.ttc");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Avenir-bold";
+  src: url("/dist/fonts/AvenirNext.ttc");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Avenir-bold-condensed";
+  src: url("/dist/fonts/AvenirNextCondensed.ttc");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Resets */
+button, a {
+  background: transparent;
+  border: none;
+  cursor: pointer; }
+
+.font-b {
+  font-family: 'Avenir-bold'; }
+
+html, body {
+  height: 100%;
+  position: relative; }
+
+body {
+  background: url("/dist/img/main-mobile.png") no-repeat center center fixed;
+  background-size: cover; }
+
+.main-wrapper {
+  padding-left: 52px;
+  padding-right: 52px;
+  margin-bottom: 40px; }
+
+h1, h2, h3, h4, h5, h6, p, span, div {
+  font-family: 'Avenir-regular'; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.logo {
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+.cr-white {
+  color: white !important; }
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px; }
+
+.text {
+  font-size: 12px; }
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.terminos {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 0; }
+
+.legal-foot {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px; }
+
+.btn-red {
+  background: #ff5900;
+  background: -moz-linear-gradient(top, #ff5900 0%, #ff004d 41%, #ff004d 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #ff5900), color-stop(41%, #ff004d), color-stop(100%, #ff004d));
+  background: -webkit-linear-gradient(top, #ff5900 0%, #ff004d 41%, #ff004d 100%);
+  background: -o-linear-gradient(top, #ff5900 0%, #ff004d 41%, #ff004d 100%);
+  background: -ms-linear-gradient(top, #ff5900 0%, #ff004d 41%, #ff004d 100%);
+  background: linear-gradient(to bottom, #ff5900 0%, #ff004d 41%, #ff004d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5900', endColorstr='#ff004d', GradientType=0 );
+  width: 216px;
+  min-height: 53px;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 24px;
+  margin-bottom: 20px; }
+
+.btn-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 18px;
+  transition: all 350ms ease-in-out; }
+  .btn-item:hover, .btn-item.active {
+    font-family: 'Avenir-bold'; }
+
+.dot {
+  background: #ff5900;
+  background: -moz-linear-gradient(top, #ff5900 0%, #ff004d 41%, #ff004d 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #ff5900), color-stop(41%, #ff004d), color-stop(100%, #ff004d));
+  background: -webkit-linear-gradient(top, #ff5900 0%, #ff004d 41%, #ff004d 100%);
+  background: -o-linear-gradient(top, #ff5900 0%, #ff004d 41%, #ff004d 100%);
+  background: -ms-linear-gradient(top, #ff5900 0%, #ff004d 41%, #ff004d 100%);
+  background: linear-gradient(to bottom, #ff5900 0%, #ff004d 41%, #ff004d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5900', endColorstr='#ff004d', GradientType=0 );
+  width: 15px;
+  height: 15px;
+  margin-bottom: 10px;
+  border-radius: 50%; }
+
+.show-agencia {
+  display: none; }
+
+@media only screen and (min-width: 992px) {
+  body {
+    background: url("/dist/img/main.jpg") no-repeat fixed;
+    background-size: cover; }
+  .logo {
+    text-align: left !important;
+    margin-left: 120px; }
+  .main-wrapper {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto; }
+  .title {
+    font-size: 80px; }
+  .text {
+    font-size: 24px !important; }
+  .subtitle {
+    font-size: 30px !important;
+    text-align: left !important; }
+  .main-menu {
+    flex-direction: row;
+    justify-content: space-between; }
+  .btn-item {
+    width: 200px; }
+  .hidden-agencia {
+    display: none; }
+  .show-agencia {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 130px; }
+  .terminos {
+    flex-basis: 100%;
+    max-width: 100%;
+    justify-content: center; }
+  .legal {
+    font-size: 18px !important; } }
