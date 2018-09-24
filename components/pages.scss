@@ -28,14 +28,18 @@ button, a{
 .font-b{
     font-family: 'Avenir-bold';
 }
-html, body{
+html{
     height: 100%;
     position: relative;
+    &.full-back{
+        body {
+            height: 100%;
+            position: relative;
+            background: url("/dist/img/main-mobile.png") no-repeat center center fixed;
+            background-size: cover;
+        }
+    }
   }
-body {
-    background: url("/dist/img/main-mobile.png") no-repeat center center fixed;
-    background-size: cover;
-}
 .main-wrapper{
     padding: {
         left: 52px;
@@ -46,6 +50,7 @@ body {
 
 h1,h2,h3,h4,h5,h6,p,span,div,{
     font-family: 'Avenir-regular';
+    color:$color-dark-gray;
 }
 .hide{
     display: none;
@@ -119,11 +124,79 @@ h1,h2,h3,h4,h5,h6,p,span,div,{
 .show-agencia{
     display: none;
 }
+.top{
+    .line-color{
+        height: 8px;
+        display: flex;
+        width: 100%;
+        .item-color-1{
+            flex-grow: 1;
+            background-color: $color-cyan;    
+        }
+        .item-color-2{
+            flex-grow: 1;
+            background-color: $color-purple;    
+        }
+        .item-color-3{
+            flex-grow: 1;
+            background-color: $color-dark-blue;    
+        }
+    }
+    .pleca-roja{
+        @include gradient;
+        height: 150px;
+        
+        .col-12{
+            padding-top: 80px;
+        }     
+    }
+}
+
+.tipo {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+    input{
+        height: 50px;
+        width: 50px;
+        -webkit-appearance: none;
+        z-index: 1;
+    }
+    input:checked{
+        height: 100px;
+        &:before{
+            content: " ";
+            @include gradient;
+            width: 15px;
+            height: 15px;
+            margin-bottom: 10px;
+            border-radius: 50%;  
+        }
+    }
+    .item-type{
+        position: relative;
+        i{
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 50px;
+            z-index: 0;
+            pointer-events: none
+        }
+        .dot{
+            display: none;
+        }
+    }
+}
 @media #{$lg}{
-    body {
-        background: url("/dist/img/main.jpg") no-repeat fixed;
-        background-size: cover;
-    
+    html{
+        &.full-back{
+            body {
+                background: url("/dist/img/main.jpg") no-repeat center center fixed;
+                background-size: cover;
+            }
+        }
     }
     .logo{
         text-align: left!important;
