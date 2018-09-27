@@ -1,21 +1,54 @@
-function showHide(){
-    var buttonShow= $('#btn-nuevoContrato'),
-        closeBack=$('#close-contrato');
-        $('#crear-contrato').hide("slow");
-        $('#inicio-contrato').show("slow"); 
+function radiosCheck(){
+    $(".radio").click( function(){
+        if ($(this).is(':checked')){
+            $(this).parent().find(".dot").css("display", "block");
+            $(".radio").not(this).parent().find(".dot").css("display", "none")
+        }
+        else{
+            
 
-        buttonShow.click( function(){
-            $('#inicio-contrato').hide("slow");
-            $('#crear-contrato').show("slow"); 
-        })
-        closeBack.click(function(){
-            $('#crear-contrato').hide("slow");
-            $('#inicio-contrato').show("slow"); 
-        })
-
+        }
+    })
+}
+function quantity() {
+    $('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
+    $('.quantity').each(function() {
+      var spinner = $(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity-up'),
+        btnDown = spinner.find('.quantity-down'),
+        min = input.attr('min'),
+        max = input.attr('max');
+    
+      btnUp.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue >= max) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue + 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+    
+      btnDown.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+    
+    });
 }
 
-$(document).ready(function(){
-    showHide()   
-    
+
+
+radiosCheck();
+$(document).ready( function(){
+    radiosCheck();
+    quantity();
 })
