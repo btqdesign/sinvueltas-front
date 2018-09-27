@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "sin-vueltas";
-  src:url("/dist/fonts/sin-vueltas/fonts/sin-vueltas.eot");
-  src:url("/dist/fonts/sin-vueltas/fonts/sin-vueltas.eot?#iefix") format("embedded-opentype"),
-    url("/dist/fonts/sin-vueltas/fonts/sin-vueltas.woff") format("woff"),
-    url("/dist/fonts/sin-vueltas/fonts/sin-vueltas.ttf") format("truetype"),
-    url("/dist/fonts/sin-vueltas/fonts/sin-vueltas.svg#sin-vueltas") format("svg");
+  src:url("fonts/sin-vueltas.eot");
+  src:url("fonts/sin-vueltas.eot?#iefix") format("embedded-opentype"),
+    url("fonts/sin-vueltas.woff") format("woff"),
+    url("fonts/sin-vueltas.ttf") format("truetype"),
+    url("fonts/sin-vueltas.svg#sin-vueltas") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -46,4 +46,7 @@
 }
 .icon-house:before {
   content: "\63";
+}
+.icon-check:before {
+  content: "\64";
 }
