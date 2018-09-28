@@ -27,6 +27,8 @@ button, a {
   background: transparent;
   border: none;
   cursor: pointer; }
+  button:focus, a:focus {
+    outline: none; }
 
 .icon-size-20 {
   font-size: 20px; }
@@ -60,7 +62,7 @@ html {
   padding-right: 52px;
   margin-bottom: 40px; }
 
-h1, h2, h3, h4, h5, h6, p, span, div {
+h1, h2, h3, h4, h5, h6, p, span, div, label {
   font-family: 'Avenir-regular';
   color: #626161; }
 
@@ -86,6 +88,9 @@ h1, h2, h3, h4, h5, h6, p, span, div {
   margin-bottom: 40px; }
 
 .text {
+  font-size: 12px; }
+
+.text-details {
   font-size: 12px; }
 
 .main-menu {
@@ -311,6 +316,122 @@ input[type=number] {
 .quantity-button.quantity-down {
   bottom: 0; }
 
+.styled-checkbox {
+  position: absolute;
+  opacity: 0; }
+  .styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0; }
+  .styled-checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white; }
+  .styled-checkbox:hover + label:before {
+    background: #FF5900; }
+  .styled-checkbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12); }
+  .styled-checkbox:checked + label:before {
+    background: white; }
+  .styled-checkbox:disabled + label {
+    color: #FF004B;
+    cursor: auto; }
+  .styled-checkbox:disabled + label:before {
+    box-shadow: none;
+    background: #FF004B; }
+  .styled-checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: #FF004B;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 #FF004B, 4px 0 0 #FF004B, 4px -2px 0 #FF004B, 4px -4px 0 #FF004B, 4px -6px 0 #FF004B, 4px -8px 0 #FF004B;
+    transform: rotate(45deg); }
+
+.detalles {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #c4c4c4; }
+
+.inline-elements {
+  display: flex;
+  justify-content: space-around; }
+
+.add {
+  margin-bottom: 20px !important; }
+  .add input {
+    border-radius: 0;
+    border: white; }
+    .add input[disabled] {
+      background: white; }
+  .add button {
+    border-radius: 0;
+    background-color: #60C8F7;
+    color: wheat;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center; }
+    .add button.less {
+      background-color: #FF004B; }
+
+.grid-less {
+  display: flex;
+  flex-wrap: wrap; }
+  .grid-less .add {
+    width: 100%; }
+  .grid-less.space {
+    justify-content: space-between; }
+
+.choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative; }
+  .choose i {
+    font-size: 60px;
+    line-height: 1; }
+  .choose .footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; }
+    .choose .footer .btn-choose {
+      width: 140px;
+      height: 40px;
+      background-color: white;
+      position: absolute;
+      border-radius: 50px;
+      z-index: 0;
+      -webkit-appearance: none;
+      transition: all 350ms ease-in-out;
+      cursor: pointer;
+      padding: 10px; }
+      .choose .footer .btn-choose:hover, .choose .footer .btn-choose:checked {
+        background-color: #60C8F7;
+        color: white;
+        border: none;
+        outline: 0; }
+      .choose .footer .btn-choose:focus {
+        border: none;
+        outline: 0; }
+    .choose .footer label {
+      z-index: 1;
+      pointer-events: none;
+      margin-bottom: 0;
+      font-size: 10px; }
+
 @media only screen and (min-width: 768px) {
   .items {
     flex-direction: row; }
@@ -320,7 +441,13 @@ input[type=number] {
     font-size: 22px;
     color: white;
     background-color: #009ADE;
-    border-radius: 50px; } }
+    border-radius: 50px; }
+  .grid-less .add {
+    width: 30.5%; }
+    .grid-less .add:not(:nth-child(3)) {
+      margin-right: 20px; }
+  .choose {
+    width: 25%; } }
 
 @media only screen and (min-width: 992px) {
   html.full-back body {
@@ -364,4 +491,6 @@ input[type=number] {
     max-width: 100%;
     justify-content: center; }
   .legal {
-    font-size: 18px !important; } }
+    font-size: 18px !important; }
+  .grid-less .add {
+    width: 31.7%; } }

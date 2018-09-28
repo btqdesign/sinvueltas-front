@@ -22,6 +22,9 @@ button, a{
     background: transparent;
     border: none;
     cursor: pointer;
+    &:focus{
+        outline: none;
+    }
 }
 .icon-size{
     &-20{
@@ -64,7 +67,7 @@ html{
     margin-bottom: 40px;    
 }
 
-h1,h2,h3,h4,h5,h6,p,span,div,{
+h1,h2,h3,h4,h5,h6,p,span,div, label{
     font-family: 'Avenir-regular';
     color:$color-dark-gray;
 }
@@ -92,7 +95,9 @@ h1,h2,h3,h4,h5,h6,p,span,div,{
 .text{
     font-size: 12px;
 }
-
+.text-details{
+    font-size: 12px;
+}
 .main-menu{
     display: flex;
     flex-direction: column;
@@ -324,8 +329,164 @@ h1,h2,h3,h4,h5,h6,p,span,div,{
   .quantity-button.quantity-down {
     bottom: 0;
   }  
+  .styled-checkbox {
+    position: absolute;
+    opacity: 0;
+  
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+  
+    // Box.
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 20px;
+      height: 20px;
+      background: white;
+    }
+  
+    // Box hover
+    &:hover + label:before {
+      background: $color-red-2;
+    }
+    
+    // Box focus
+    &:focus + label:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+  
+    // Box checked
+    &:checked + label:before {
+      background:white;
+    }
+    
+    // Disabled state label.
+    &:disabled + label {
+      color: $color-red-1;
+      cursor: auto;
+    }
+  
+    // Disabled box.
+    &:disabled + label:before {
+      box-shadow: none;
+      background: $color-red-1;
+    }
+  
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 9px;
+      background:$color-red-1;
+      width: 2px;
+      height: 2px;
+      box-shadow: 
+        2px 0 0 $color-red-1,
+        4px 0 0 $color-red-1,
+        4px -2px 0 $color-red-1,
+        4px -4px 0 $color-red-1,
+        4px -6px 0 $color-red-1,
+        4px -8px 0 $color-red-1;
+      transform: rotate(45deg);
+    }
+  }
+.detalles{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: $color-medium-gray;
+}
+.inline-elements{
+    display: flex;
+    justify-content: space-around;
+}
+.add{
+    margin-bottom: 20px !important;
+    input{
+        border-radius: 0;
+        border: white;
+        &[disabled]{
+            background: white;
+        }
+    }
+    button{
+        border-radius: 0;
+        background-color: $color-light-blue;
+        color: wheat;
+        border: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        &.less{
+            background-color: $color-red-1;
+        }
+    }
+}
+.grid-less{
+    display: flex;
+    flex-wrap: wrap;
+    .add{
+        width: 100%;
+    }
+    &.space{
+        justify-content: space-between;
+    }
+}
 
-
+.choose{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+    i{
+        font-size: 60px;
+        line-height: 1;
+    }
+    .footer{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        .btn-choose{
+            width: 140px;
+            height: 40px;
+            background-color: white;
+            position: absolute;
+            border-radius: 50px;
+            z-index: 0;
+            -webkit-appearance: none;
+            transition: all 350ms ease-in-out;
+            cursor: pointer;
+            padding: 10px;
+            &:hover, &:checked{
+                background-color: $color-light-blue;
+                color: white;
+                border: none;
+                outline: 0;
+            }
+            &:focus{
+                border: none;
+                outline: 0;
+            }
+        }
+        label{
+            z-index: 1;
+            pointer-events: none;
+            margin-bottom: 0;  
+            font-size: 10px; 
+        }
+    }
+}
 @media #{$md}{
     .items{
         flex-direction: row;
@@ -339,10 +500,19 @@ h1,h2,h3,h4,h5,h6,p,span,div,{
         border-radius: 50px;
     
     }
+    .grid-less{
+        .add{
+            width: 30.5%;
+            &:not(:nth-child(3)){
+                margin-right: 20px;
+            }
+        }
+    }
+    .choose{
+        width: 25%;
+    }
 }
-.check{
-    
-}
+
 
 @media #{$lg}{
     html{
@@ -406,5 +576,10 @@ h1,h2,h3,h4,h5,h6,p,span,div,{
     }
     .legal{
         font-size: 18px!important;
+    }
+    .grid-less{
+        .add{
+            width: 31.7%;
+        }
     }
 }
