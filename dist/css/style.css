@@ -45,6 +45,15 @@ button, a {
 .icon-size-40 {
   font-size: 40px; }
 
+.mr-bottom-20 {
+  margin-bottom: 20px; }
+
+.mr-bottom-30 {
+  margin-bottom: 30px; }
+
+.mr-bottom-40 {
+  margin-bottom: 40px; }
+
 .font-b {
   font-family: 'Avenir-bold'; }
 
@@ -431,6 +440,9 @@ input[type=number] {
       pointer-events: none;
       margin-bottom: 0;
       font-size: 10px; }
+
+.map {
+  height: 270px; }
 
 @media only screen and (min-width: 768px) {
   .items {

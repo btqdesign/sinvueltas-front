@@ -43,7 +43,17 @@ button, a{
         font-size: 40px;
     }
 }
-
+.mr-bottom{
+    &-20{
+        margin-bottom: 20px;
+    }
+    &-30{
+        margin-bottom: 30px;
+    }
+    &-40{
+        margin-bottom: 40px;
+    }
+}
 .font-b{
     font-family: 'Avenir-bold';
 }
@@ -486,6 +496,9 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
             font-size: 10px; 
         }
     }
+}
+.map{
+    height: 270px;
 }
 @media #{$md}{
     .items{
