@@ -134,6 +134,13 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     border-radius:50px;
     font-size: 24px;
     margin-bottom: 20px;
+    transition: all 350ms ease-in-out; 
+    &:hover{
+        @include gradient-hover;
+    }
+    &.registrar{
+        width: 265px;
+    }
 }
 .btn-item{
     display: flex;
@@ -241,6 +248,10 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     color: white;
     background-color: $color-cyan;
     border-radius: 50px;
+    transition: background-color 350ms ease-in-out;
+    &:hover{
+        background-color: $color-light-blue;
+    }
 
 }
 .item-type-number{
@@ -501,6 +512,11 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     height: 270px;
 }
 @media #{$md}{
+    .btn-red{
+        &.registrar{
+            width: 380px;
+        }
+    }
     .items{
         flex-direction: row;
     }
@@ -524,6 +540,7 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     .choose{
         width: 25%;
     }
+
 }
 
 
@@ -559,7 +576,7 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     }
     .topic{
         font-size: 44px;
-        margin-bottom: 50px;
+        margin-bottom: 0;
         
     }
     .subtitle{

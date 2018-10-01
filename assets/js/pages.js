@@ -45,9 +45,6 @@ function quantity() {
     });
 }
 
-
-
-radiosCheck();
 $(document).ready( function(){
     radiosCheck();
     quantity();
