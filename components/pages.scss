@@ -81,7 +81,7 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     font-family: 'Avenir-regular';
     color:$color-dark-gray;
 }
-.hide{
+.hidden{
     display: none;
 }
 .show{
@@ -162,6 +162,10 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     height: 15px;
     margin-bottom: 10px;
     border-radius: 50%;
+    &.gray{
+        background: $color-medium-gray;
+        margin-bottom: 0;
+    }
 }
 .show-agencia{
     display: none;
@@ -510,6 +514,28 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
 }
 .map{
     height: 270px;
+}
+.separator{
+    position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    .line{
+        height: 1px;
+        background-color: $color-medium-gray;
+        width: 47%;
+    }
+}
+.cr-red{
+    color: $color-red-1;
+}
+.link-red{
+    color: $color-red-1;
+    transition: color 350ms ease-in-out;
+    &:hover{
+        color: $color-red-2;
+    }
 }
 @media #{$md}{
     .btn-red{

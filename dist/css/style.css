@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, label {
   font-family: 'Avenir-regular';
   color: #626161; }
 
-.hide {
+.hidden {
   display: none; }
 
 .show {
@@ -173,6 +173,9 @@ h1, h2, h3, h4, h5, h6, p, span, div, label {
   height: 15px;
   margin-bottom: 10px;
   border-radius: 50%; }
+  .dot.gray {
+    background: #c4c4c4;
+    margin-bottom: 0; }
 
 .show-agencia {
   display: none; }
@@ -458,6 +461,26 @@ input[type=number] {
 
 .map {
   height: 270px; }
+
+.separator {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; }
+  .separator .line {
+    height: 1px;
+    background-color: #c4c4c4;
+    width: 47%; }
+
+.cr-red {
+  color: #FF004B; }
+
+.link-red {
+  color: #FF004B;
+  transition: color 350ms ease-in-out; }
+  .link-red:hover {
+    color: #FF5900; }
 
 @media only screen and (min-width: 768px) {
   .btn-red.registrar {
