@@ -46,13 +46,25 @@ button, a {
   font-size: 40px; }
 
 .mr-bottom-20 {
-  margin-bottom: 20px; }
+  margin-bottom: 20px !important; }
 
 .mr-bottom-30 {
-  margin-bottom: 30px; }
+  margin-bottom: 30px !important; }
 
 .mr-bottom-40 {
-  margin-bottom: 40px; }
+  margin-bottom: 40px !important; }
+
+.mr-right-20 {
+  margin-right: 20px !important; }
+
+.mr-right-30 {
+  margin-right: 30px !important; }
+
+.mr-right-40 {
+  margin-right: 40px !important; }
+
+[class*=icon-] {
+  line-height: 1; }
 
 .font-b {
   font-family: 'Avenir-bold'; }
@@ -207,6 +219,9 @@ h1, h2, h3, h4, h5, h6, p, span, div, label {
   margin-bottom: 40px; }
   .top .pleca-roja .col-12 {
     padding-top: 80px; }
+
+input:focus {
+  outline: none; }
 
 .items {
   display: flex;
