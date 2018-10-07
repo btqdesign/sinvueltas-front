@@ -70,7 +70,6 @@ button, a {
   font-family: 'Avenir-bold'; }
 
 html {
-  height: 100%;
   position: relative; }
   html.full-back body {
     height: 100%;
@@ -122,14 +121,13 @@ h1, h2, h3, h4, h5, h6, p, span, div, label {
 
 .terminos {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
   padding-bottom: 0; }
 
 .legal-foot {
   position: absolute;
-  bottom: 0;
-  margin-bottom: 20px; }
+  bottom: 0; }
 
 .btn-red {
   background: #ff5900;
@@ -188,6 +186,37 @@ h1, h2, h3, h4, h5, h6, p, span, div, label {
   .dot.gray {
     background: #c4c4c4;
     margin-bottom: 0; }
+
+.registrar .content-registro {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .registrar .content-registro .text {
+    color: white;
+    margin-bottom: 0;
+    margin-right: 20px; }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.avatar-space {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #c4c4c4; }
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .circle i {
+    color: #FF004B; }
 
 .show-agencia {
   display: none; }
@@ -270,8 +299,8 @@ input:focus {
       transform: translateX(-50%); }
 
 .btn-1 {
-  width: 119px;
-  height: 20px;
+  width: 160px;
+  height: 40px;
   font-size: 12px;
   color: white;
   background-color: #009ADE;
@@ -401,10 +430,6 @@ input[type=number] {
   padding-top: 20px;
   background-color: #c4c4c4; }
 
-.inline-elements {
-  display: flex;
-  justify-content: space-around; }
-
 .add {
   margin-bottom: 20px !important; }
   .add input {
@@ -415,7 +440,7 @@ input[type=number] {
   .add button {
     border-radius: 0;
     background-color: #60C8F7;
-    color: wheat;
+    color: white;
     border: none;
     width: 40px;
     height: 40px;
@@ -423,6 +448,8 @@ input[type=number] {
     justify-content: center; }
     .add button.less {
       background-color: #FF004B; }
+    .add button.agergar-btn {
+      width: 100px; }
 
 .grid-less {
   display: flex;
@@ -430,6 +457,8 @@ input[type=number] {
   .grid-less .add {
     width: 100%; }
   .grid-less.space {
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: space-between; }
 
 .choose {
@@ -497,6 +526,20 @@ input[type=number] {
   .link-red:hover {
     color: #FF5900; }
 
+.back-img {
+  height: 190px;
+  background-size: cover;
+  background-position-y: -100px; }
+  .back-img .img-logo {
+    margin-top: 10px; }
+  .back-img .bienvenido {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .back-img .bienvenido .title-bienvenido {
+      font-size: 36px;
+      color: white; }
+
 @media only screen and (min-width: 768px) {
   .btn-red.registrar {
     width: 380px; }
@@ -509,12 +552,29 @@ input[type=number] {
     color: white;
     background-color: #009ADE;
     border-radius: 50px; }
+  .subtitle.inicio {
+    margin-bottom: 100px; }
   .grid-less .add {
     width: 30.5%; }
     .grid-less .add:not(:nth-child(3)) {
       margin-right: 20px; }
+  .grid-less.space {
+    display: flex;
+    justify-content: space-between; }
   .choose {
-    width: 25%; } }
+    width: 25%; }
+  .back-img {
+    height: 425px; }
+    .back-img .img-logo {
+      margin-top: 50px; }
+    .back-img .bienvenido .title-bienvenido {
+      font-size: 60px;
+      color: white; }
+  .terminos {
+    margin-bottom: 40px; }
+  .inline-elements {
+    display: flex;
+    justify-content: space-around; } }
 
 @media only screen and (min-width: 992px) {
   html.full-back body {
@@ -543,7 +603,8 @@ input[type=number] {
     text-align: left !important; }
   .main-menu {
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 50px !important; }
   .btn-item {
     width: 200px; }
   .hidden-agencia {
