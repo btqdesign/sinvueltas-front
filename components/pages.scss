@@ -45,20 +45,33 @@ button, a{
 }
 .mr-bottom{
     &-20{
-        margin-bottom: 20px;
+        margin-bottom: 20px !important;
     }
     &-30{
-        margin-bottom: 30px;
+        margin-bottom: 30px !important;
     }
     &-40{
-        margin-bottom: 40px;
+        margin-bottom: 40px !important;
     }
+}
+.mr-right{
+    &-20{
+        margin-right: 20px !important;
+    }
+    &-30{
+        margin-right: 30px !important;
+    }
+    &-40{
+        margin-right: 40px !important;
+    }
+}
+[class*=icon-]{
+    line-height: 1;
 }
 .font-b{
     font-family: 'Avenir-bold';
 }
 html{
-    height: 100%;
     position: relative;
     &.full-back{
         body {
@@ -123,14 +136,13 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
 }
 .terminos{
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: flex-end;
     padding-bottom: 0;
 }
 .legal-foot{
     position: absolute;
     bottom: 0;
-    margin-bottom: 20px;
 }
 .btn-red{
     @include gradient;
@@ -174,6 +186,42 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
         margin-bottom: 0;
     }
 }
+.registrar{
+    .content-registro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .text{
+            color: white;
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+    }
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar-space{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: $color-medium-gray;
+
+}
+.circle{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+        color: $color-red-1;
+    }
+}
 .show-agencia{
     display: none;
 }
@@ -205,7 +253,11 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
         }     
     }
 }
-
+input {
+    &:focus{
+        outline: none
+    }
+}
 .items {
     display: flex;
     justify-content: space-between;
@@ -253,8 +305,8 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     }
 }
 .btn-1{
-    width: 119px;
-    height: 20px;
+    width: 160px;
+    height: 40px;
     font-size: 12px;
     color: white;
     background-color: $color-cyan;
@@ -440,10 +492,6 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     padding-top: 20px;
     background-color: $color-medium-gray;
 }
-.inline-elements{
-    display: flex;
-    justify-content: space-around;
-}
 .add{
     margin-bottom: 20px !important;
     input{
@@ -456,7 +504,7 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     button{
         border-radius: 0;
         background-color: $color-light-blue;
-        color: wheat;
+        color: white;
         border: none;
         width: 40px;
         height: 40px;
@@ -464,6 +512,9 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
         justify-content: center;
         &.less{
             background-color: $color-red-1;
+        }
+        &.agergar-btn{
+            width: 100px;
         }
     }
 }
@@ -474,6 +525,8 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
         width: 100%;
     }
     &.space{
+        display: grid;
+        grid-template-columns: auto auto;
         justify-content: space-between;
     }
 }
@@ -551,6 +604,23 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
         color: $color-red-2;
     }
 }
+.back-img{
+    height:  190px;
+    background-size: cover;
+    background-position-y: -100px;
+    .img-logo{
+        margin-top: 10px;
+    }
+    .bienvenido{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .title-bienvenido{
+            font-size: 36px;
+            color: white;
+        }
+    }
+}
 @media #{$md}{
     .btn-red{
         &.registrar{
@@ -569,6 +639,11 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
         border-radius: 50px;
     
     }
+    .subtitle{
+        &.inicio{
+            margin-bottom: 100px;
+        }
+    }
     .grid-less{
         .add{
             width: 30.5%;
@@ -576,11 +651,35 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
                 margin-right: 20px;
             }
         }
+        &.space{
+            display: flex;
+            //grid-template-columns: auto auto;
+            justify-content: space-between;
+        }
+        
     }
     .choose{
         width: 25%;
     }
-
+    .back-img{
+        height:  425px;
+        .img-logo{
+            margin-top: 50px;
+        }
+        .bienvenido{
+            .title-bienvenido{
+                font-size: 60px;
+                color: white;
+            }
+        }
+    }
+    .terminos{
+        margin-bottom: 40px;
+    }
+    .inline-elements{
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 
@@ -626,6 +725,7 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     .main-menu{
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 50px !important;
     }
     .btn-item{
         width: 200px;
