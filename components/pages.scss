@@ -86,6 +86,12 @@ html{
             background: url("/dist/img/main-mobile.png") no-repeat center center fixed;
             background-size: cover;
         }
+        &.v2{
+            body{
+                background: url("/dist/img/main-mobile-2.png") no-repeat center center fixed;
+                background-size:cover;
+            }
+        }
     }
   }
 .main-wrapper{
@@ -735,6 +741,10 @@ input {
                 background-size: cover;
                 overflow: hidden;
             }
+            &.v2{
+                background: url("/dist/img/main-2.jpg") no-repeat center center fixed;
+            }
+            background-size:cover;
         }
     }
     .items{

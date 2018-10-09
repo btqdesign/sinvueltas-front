@@ -44,8 +44,16 @@ function quantity() {
     
     });
 }
+function randomBack(){
+  var classes = ["v1", "v2"];
+    $(".full-back").each(function(){
+        $(this).addClass(classes[~~(Math.random()*classes.length)]);
+    });
+}
 
 $(document).ready( function(){
+    randomBack();
     radiosCheck();
     quantity();
+    
 })
