@@ -54,6 +54,12 @@ button, a{
         margin-bottom: 40px !important;
     }
 }
+.xs-mr-40-lg-140{
+    margin-bottom: 40px
+}
+.xs-mr-40-lg-75{
+    margin-bottom: 40px !important;
+}
 .mr-right{
     &-20{
         margin-right: 20px !important;
@@ -139,6 +145,11 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
     align-items: flex-start;
     justify-content: flex-end;
     padding-bottom: 0;
+}
+.hidden-agencia{
+    img{
+        width: 60px !important;
+    }
 }
 .legal-foot{
     position: absolute;
@@ -247,7 +258,6 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
         @include gradient;
         height: 150px;
         margin-bottom:40px;
-        
         .col-12{
             padding-top: 80px;
         }     
@@ -300,7 +310,18 @@ input {
             display: none;
             position: absolute;
             left: 50%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             transform: translateX(-50%);
+            
+        }
+        .type-propiedad {
+            position: absolute;
+            padding-top: 20px;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%)
         }
     }
 }
@@ -622,6 +643,29 @@ input {
     }
 }
 @media #{$md}{
+    html{
+        height: 100vh;
+    }
+    .text{
+        font-size: 24px !important;
+    }
+    .hidden-agencia{
+        img{
+            width: 100px !important;
+            margin-bottom: 20px;
+        }
+    }
+    .top{
+        .pleca-roja{
+            margin-bottom:75px;
+        }    
+    }
+    .xs-mr-40-lg-140{
+        margin-bottom: 140px !important;
+    }
+    .xs-mr-40-lg-75{
+        margin-bottom: 75px !important;
+    }
     .btn-red{
         &.registrar{
             width: 380px;
@@ -689,6 +733,7 @@ input {
             body {
                 background: url("/dist/img/main.jpg") no-repeat center center fixed;
                 background-size: cover;
+                overflow: hidden;
             }
         }
     }
@@ -710,9 +755,7 @@ input {
     .title{
         font-size: 80px;
     }
-    .text{
-        font-size: 24px !important;
-    }
+    
     .topic{
         font-size: 44px;
         margin-bottom: 0;
@@ -731,7 +774,10 @@ input {
         width: 200px;
     }
     .hidden-agencia{
-        display: none
+        display: none;
+        img{
+            width: 60px !important;
+        }
     }
     .show-agencia{
         display: block;
@@ -743,6 +789,8 @@ input {
         flex-basis: 100%;
         max-width: 100%;
         justify-content: center;
+        position: absolute;
+        bottom: 0;
     }
     .legal{
         font-size: 18px!important;
