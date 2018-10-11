@@ -667,9 +667,11 @@ input[type=number] {
     background-size: cover;
     overflow: hidden; }
   html.full-back.v1 body {
-    background: url("/dist/img/Imagen-random1.jpg") no-repeat center center fixed; }
+    background: url("/dist/img/Imagen-random1.jpg") no-repeat center center;
+    background-size: cover; }
   html.full-back.v2 body {
-    background: url("/dist/img/imagen-random2.jpg") no-repeat center center fixed; }
+    background: url("/dist/img/imagen-random2.jpg") no-repeat center center;
+    background-size: cover; }
   .items {
     width: 600px; }
     .items.width {

@@ -800,12 +800,14 @@ input {
             }
             &.v1{
                 body{
-                    background: url("/dist/img/Imagen-random1.jpg") no-repeat center center fixed;
+                    background: url("/dist/img/Imagen-random1.jpg") no-repeat center center;
+                    background-size: cover;
                 }
             }
             &.v2{
                 body{
-                    background: url("/dist/img/imagen-random2.jpg") no-repeat center center fixed;
+                    background: url("/dist/img/imagen-random2.jpg") no-repeat center center;
+                    background-size: cover;
                 }
             }
         }
