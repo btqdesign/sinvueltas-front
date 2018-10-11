@@ -30,6 +30,25 @@ button, a {
   button:focus, a:focus {
     outline: none; }
 
+hr.white {
+  border-top: 1px solid white; }
+
+.btn-collapse {
+  background-color: #c4c4c4;
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  font-size: 12px; }
+  .btn-collapse:focus {
+    border: none;
+    outline: none;
+    box-shadow: none; }
+  .btn-collapse:hover {
+    border: none; }
+  .btn-collapse[aria-expanded=true] {
+    width: 100%;
+    border-radius: 0; }
+
 .icon-size-20 {
   font-size: 20px; }
 
@@ -60,6 +79,9 @@ button, a {
 .xs-mr-40-lg-75 {
   margin-bottom: 40px !important; }
 
+.xs-mrT-40-lg-75 {
+  margin-top: 40px !important; }
+
 .mr-right-20 {
   margin-right: 20px !important; }
 
@@ -79,12 +101,27 @@ html {
   position: relative; }
   html.full-back body {
     height: 100%;
-    position: relative;
-    background: url("/dist/img/main-mobile.png") no-repeat center center fixed;
+    position: relative; }
+  html.full-back.v1 body {
+    background: url("/dist/img/imagen-random-mov.jpg") no-repeat center center fixed;
     background-size: cover; }
   html.full-back.v2 body {
-    background: url("/dist/img/main-mobile-2.png") no-repeat center center fixed;
+    background: url("/dist/img/imagen-random-mov2.jpg") no-repeat center center fixed;
     background-size: cover; }
+
+.component-progress {
+  border-radius: 0;
+  height: 8px;
+  width: 100%;
+  display: flex; }
+  .component-progress[value] {
+    -webkit-appearance: none;
+    appearance: none; }
+    .component-progress[value]::-webkit-progress-bar {
+      background-color: white;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) inset; }
+    .component-progress[value]::-webkit-progress-value {
+      background: linear-gradient(90deg, #009ADE 4.63%, #8005AF 53.54%, #1F1646 100%); }
 
 .main-wrapper {
   padding-left: 52px;
@@ -585,6 +622,8 @@ input[type=number] {
     margin-bottom: 140px !important; }
   .xs-mr-40-lg-75 {
     margin-bottom: 75px !important; }
+  .xs-mrT-40-lg-75 {
+    margin-bottom: 75px !important; }
   .btn-red.registrar {
     width: 380px; }
   .items {
@@ -605,6 +644,9 @@ input[type=number] {
   .grid-less.space {
     display: flex;
     justify-content: space-between; }
+  .btn-collapse {
+    height: 45px;
+    font-size: 22px; }
   .choose {
     width: 25%; }
   .back-img {
@@ -621,14 +663,13 @@ input[type=number] {
     justify-content: space-around; } }
 
 @media only screen and (min-width: 992px) {
-  html.full-back {
-    background-size: cover; }
-    html.full-back body {
-      background: url("/dist/img/main.jpg") no-repeat center center fixed;
-      background-size: cover;
-      overflow: hidden; }
-    html.full-back.v2 {
-      background: url("/dist/img/main-2.jpg") no-repeat center center fixed; }
+  html.full-back body {
+    background-size: cover;
+    overflow: hidden; }
+  html.full-back.v1 body {
+    background: url("/dist/img/Imagen-random1.jpg") no-repeat center center fixed; }
+  html.full-back.v2 body {
+    background: url("/dist/img/imagen-random2.jpg") no-repeat center center fixed; }
   .items {
     width: 600px; }
     .items.width {
