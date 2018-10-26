@@ -1,4 +1,4 @@
-@import url(/dist/fonts/sin-vueltas/styles.css);/*Settings*/
+@import url(/dist/fonts/sin-vueltas/styles.css);@import url(/dist/fonts/sin-vueltas-dos/styles.css);/*Settings*/
 /*Media Queries*/
 .bg-gray {
   background-color: #EFECEC; }
@@ -100,7 +100,6 @@ hr.white {
 html {
   position: relative; }
   html.full-back body {
-    height: 100%;
     position: relative; }
   html.full-back.v1 body {
     background: url("/dist/img/imagen-random-mov.jpg") no-repeat center center fixed;
@@ -179,10 +178,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, label {
 
 .hidden-agencia img {
   width: 60px !important; }
-
-.legal-foot {
-  position: absolute;
-  bottom: 0; }
 
 .btn-red {
   background: #ff5900;
@@ -609,8 +604,6 @@ input[type=number] {
       color: white; }
 
 @media only screen and (min-width: 768px) {
-  html {
-    height: 100vh; }
   .text {
     font-size: 24px !important; }
   .hidden-agencia img {
@@ -664,8 +657,7 @@ input[type=number] {
 
 @media only screen and (min-width: 992px) {
   html.full-back body {
-    background-size: cover;
-    overflow: hidden; }
+    background-size: cover; }
   html.full-back.v1 body {
     background: url("/dist/img/Imagen-random1.jpg") no-repeat center center;
     background-size: cover; }
@@ -710,7 +702,6 @@ input[type=number] {
     flex-basis: 100%;
     max-width: 100%;
     justify-content: center;
-    position: absolute;
     bottom: 0; }
   .legal {
     font-size: 18px !important; }
