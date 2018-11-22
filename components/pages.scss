@@ -322,7 +322,8 @@ h1,h2,h3,h4,h5,h6,p,span,div, label{
 }
 input {
     &:focus{
-        outline: none
+        outline: none;
+        
     }
 }
 .items {
@@ -333,16 +334,20 @@ input {
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
+    flex-wrap: wrap;
     input{
         height: 70px;
         width: 70px;
         -webkit-appearance: none;
         z-index: 1;
         margin-bottom: 10px;
+        border:0;
+
         
     }
     input:checked, input:focus{
         outline: none;
+        background: transparent;
         &:before{
             content: " ";
             @include gradient;
@@ -605,7 +610,7 @@ input {
     &.space{
         display: grid;
         grid-template-columns: auto auto;
-        justify-content: space-between;
+        grid-column-gap: 100px;
     }
 }
 
@@ -758,7 +763,7 @@ input {
         &.space{
             display: flex;
             //grid-template-columns: auto auto;
-            justify-content: space-between;
+            justify-content: center;
         }
         
     }
@@ -875,4 +880,8 @@ input {
             width: 31.7%;
         }
     }
+}
+/* Fixes */
+.formui-checkbox{
+    margin-bottom: 0;
 }

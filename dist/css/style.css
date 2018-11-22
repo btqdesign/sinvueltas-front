@@ -309,15 +309,18 @@ input:focus {
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  flex-wrap: wrap; }
   .items input {
     height: 70px;
     width: 70px;
     -webkit-appearance: none;
     z-index: 1;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    border: 0; }
   .items input:checked, .items input:focus {
-    outline: none; }
+    outline: none;
+    background: transparent; }
     .items input:checked:before, .items input:focus:before {
       content: " ";
       background: #ff5900;
@@ -522,7 +525,7 @@ input[type=number] {
   .grid-less.space {
     display: grid;
     grid-template-columns: auto auto;
-    justify-content: space-between; }
+    grid-column-gap: 100px; }
 
 .choose {
   display: flex;
@@ -636,7 +639,7 @@ input[type=number] {
       margin-right: 20px; }
   .grid-less.space {
     display: flex;
-    justify-content: space-between; }
+    justify-content: center; }
   .btn-collapse {
     height: 45px;
     font-size: 22px; }
@@ -707,3 +710,7 @@ input[type=number] {
     font-size: 18px !important; }
   .grid-less .add {
     width: 31.7%; } }
+
+/* Fixes */
+.formui-checkbox {
+  margin-bottom: 0; }
